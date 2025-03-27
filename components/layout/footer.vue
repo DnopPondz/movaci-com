@@ -45,7 +45,7 @@
         <!-- Column 2: Our Solutions & About Us -->
         <div>
           <h3 class="text-xl text-[#576fb7] font-semibold">Our Solutions</h3>
-          <ul class="space-y-2">
+          <ul class="space-y-2 ">
             <li v-for="(item, i) in footerList[0].details" :key="i">
               <a :href="item.link" class="text-lg hover:text-gray-500 cursor-pointer">{{ item.content }}</a>
             </li>

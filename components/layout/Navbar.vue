@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white max-md:bg-[#576fb7] fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-2xl"
+    class="xl:bg-white md:bg-white bg-[#576fb7] fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-2xl"
   >
     <div
       class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-6 md:px-10 py-4"
@@ -15,22 +15,23 @@
       </NuxtLink>
 
       <!-- Right Section (เฉพาะจอใหญ่) -->
-      <div class="hidden md:flex md:order-2 space-x-4 z-20">
+      <div class="hidden lg:flex  md:order-2 space-x-4 z-20">
         <NuxtLink to="https://my.movaci.com/" target="_black" class="flex items-center space-x-4">
-        <button
-          type="button"
-          class="text-[#576fb7] bg-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base px-6 py-3"
-        >
-          my.Movaci
-        </button>
-      </NuxtLink>
+          <button
+  type="button"
+  class="text-white bg-[#576fb7] hover:bg-[#879ee4] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-base px-6 py-3 transform transition-all duration-150 ease-in-out shadow-lg hover:shadow-2xl active:transform active:scale-95 active:shadow-none"
+>
+  my.Movaci
+</button>
+
+        </NuxtLink>
       </div>
 
       <!-- Mobile Menu Button -->
       <button
         @click="toggleMenu"
         type="button"
-        class="inline-flex items-center p-3 w-12 h-12 justify-center text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        class="inline-flex  items-center p-3 w-12 h-12 justify-center text-white rounded-lg md:hidden hover:bg-[#5f75b8] focus:outline-none focus:ring-2 focus:ring-gray-200"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -53,14 +54,15 @@
       <!-- Desktop Navigation -->
       <div
         :class="isOpen ? 'block' : 'hidden'"
-        class="w-full md:flex md:w-auto md:order-1"
+        class="w-full md:flex md:w-auto md:order-1 "
       >
         <ul
-          class="flex flex-col p-4 md:p-0 mt-4 text-xl  font-medium border border-gray-100 rounded-lg bg-white md:space-x-2 md:flex-row md:mt-0 md:border-0"
+          class="flex bg-white flex-col p-4 md:p-0 mt-4 text-xl font-medium md:space-x-2 md:flex-row md:mt-0 md:border-0 rounded-lg  "
         >
           <li>
             <NuxtLink
               to="/business"
+              @click="closeDropdown"
               class="block py-3 px-4 text-[#576fb7] hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
             >
               Business
@@ -69,6 +71,7 @@
           <li>
             <NuxtLink
               to="/enterprise"
+              @click="closeDropdown"
               class="block py-3 px-4 text-[#576fb7] hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
             >
               Enterprise
@@ -77,6 +80,7 @@
           <li>
             <NuxtLink
               to="/nonprofit"
+              @click="closeDropdown"
               class="block py-3 px-4 text-[#576fb7] hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
             >
               Non-Profit
@@ -85,6 +89,7 @@
           <li>
             <NuxtLink
               to="/solution"
+              @click="closeDropdown"
               class="block py-3 px-4 text-[#576fb7] hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
             >
               Solution
@@ -108,22 +113,39 @@
               >
                 <ul class="py-2">
                   <li>
-                    <NuxtLink to="/about" class="block py-3 px-4 text-[#576fb7]">
+                    <NuxtLink
+                      to="/about"
+                      @click="closeDropdown"
+                      class="block py-3 px-4 text-[#576fb7]"
+                    >
                       About Our Company
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="https://hub.movaci.com/blog" target="_blank" class="block py-3 px-4 text-[#576fb7]">
+                    <NuxtLink
+                      to="https://hub.movaci.com/blog"
+                      target="_blank"
+                      @click="closeDropdown"
+                      class="block py-3 px-4 text-[#576fb7]"
+                    >
                       Explore Our Blog
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/career" class="block py-3 px-4 text-[#576fb7]">
+                    <NuxtLink
+                      to="/career"
+                      @click="closeDropdown"
+                      class="block py-3 px-4 text-[#576fb7]"
+                    >
                       Join Our Team
                     </NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/contact" class="block py-3 px-4 text-[#576fb7]">
+                    <NuxtLink
+                      to="/contact"
+                      @click="closeDropdown"
+                      class="block py-3 px-4 text-[#576fb7]"
+                    >
                       Contact Us
                     </NuxtLink>
                   </li>
@@ -156,6 +178,14 @@ const updateScreenSize = () => {
 const isDropdownOpen = ref(false);
 const toggleDropdown = () => {
   isDropdownOpen.value = !isDropdownOpen.value;
+};
+
+// ปิด Dropdown เมื่อเลือกเมนู
+const closeDropdown = () => {
+  isDropdownOpen.value = false;
+  if (isMobile.value) {
+    isOpen.value = false; // ปิดเมนูมือถือเมื่อเลือกเมนู
+  }
 };
 
 // ตรวจจับการเปลี่ยนขนาดหน้าจอ

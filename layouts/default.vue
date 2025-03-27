@@ -1,5 +1,5 @@
 <template>
-  <v-layout class="flex flex-col min-h-screen">
+  <v-layout class="flex flex-col min-h-screen font-poppins">
     <!-- Navbar -->
     <Navbar />
 
@@ -24,3 +24,11 @@ import Testimonial3 from '~/components/layout/testimonial3.vue';
 import seeallsolution from '~/components/layout/seeallsolution.vue';
 import productFeattureCompoent from '~/components/layout/productFeattureCompoent.vue';
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+</style>

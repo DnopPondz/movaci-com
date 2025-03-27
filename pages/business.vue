@@ -61,7 +61,8 @@
     </div>
 
     <!-- The Solution Section (Improved Responsive Design) -->
-<div class="w-full bg-gray-100 py-12 2xl:px-[350px] px-6 md:px-16">
+    <div class="bg-[#e7f0fc] p-5">
+      <div class="w-full bg-white  py-12 px-6 md:px-16 max-w-screen-2xl mx-auto rounded-lg shadow-lg">
   <h2 class="text-3xl font-bold text-blue-800 mb-8 text-center md:text-left">The Solution</h2>
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
     <!-- Left Column (2 items) -->
@@ -100,6 +101,7 @@
       </p>
     </div>
   </div>
+</div>
 </div>
 
 

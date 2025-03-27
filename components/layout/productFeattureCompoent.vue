@@ -15,7 +15,7 @@
       >
         <div>
           <h3 class="text-lg font-semibold">Managed Services</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
@@ -32,7 +32,7 @@
         >
         <div>
           <h3 class="text-lg font-semibold">Cloud Servers</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
@@ -53,7 +53,7 @@
         >
         <div>
           <h3 class="text-lg font-semibold">MailGuard</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
@@ -70,7 +70,7 @@
       >
         <div>
           <h3 class="text-lg font-semibold">IT Consulting</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
@@ -87,7 +87,7 @@
       >
         <div>
           <h3 class="text-lg font-semibold">Training Services</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
@@ -108,7 +108,7 @@
       >
         <div>
           <h3 class="text-lg font-semibold">Internet Services</h3>
-          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-white hover:text-blue-800 transition">
+          <button class="text-white px-4 py-2 rounded-full mt-2 border border-white hover:bg-[#316fb8] hover:text-blue-800 transition">
   View More
 </button>
 
