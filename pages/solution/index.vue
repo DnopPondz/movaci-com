@@ -1,58 +1,38 @@
 <template>
-    <div>
-
-  <div class="bg-[#e6eef8] p-4 md:p-8">
-    <!-- Hero Image -->
+  <div class="bg-[#e6eef8] px-4 py-8 md:px-12 md:py-16">
     <div class="w-full">
       <img
         src="/img/products_services/bg-product-service.png"
-        class="w-full rounded-xl shadow-xl object-cover"
+        class="w-full rounded-2xl shadow-xl object-cover"
         alt="Product Service"
       />
     </div>
 
-    <!-- Title & Description -->
-    <div class="text-center xl:text-left mt-6">
-      <h1 class="text-2xl xl:text-4xl text-[#3071b7] font-bold">
-        More Solution
-      </h1>
-      <p class="text-gray-600 xl:text-xl">
-        Let Movaci help your business grow through our industry-leading managed
-        IT support services.
+    <div class="text-center xl:text-left mt-8">
+      <h1 class="text-3xl xl:text-5xl text-[#3071b7] font-bold">More Solutions</h1>
+      <p class="text-gray-700 xl:text-lg mt-2 max-w-2xl mx-auto xl:mx-0">
+        Let Movaci help your business grow through our industry-leading managed IT support services.
       </p>
     </div>
 
-    <!-- Card Section -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
       <div
         v-for="(service, index) in services"
         :key="index"
-        class="relative rounded-xl overflow-hidden group shadow-lg"
+        class="relative rounded-2xl overflow-hidden shadow-lg"
       >
         <img
           :src="service.img"
           alt="Service Image"
-          class="w-full h-64 object-cover group-hover:brightness-50 transition duration-300"
+          class="w-full h-64 object-cover"
         />
 
-        <!-- Title (Always Visible) -->
-        <div
-          class="absolute inset-0 flex items-center justify-center bg-black/40"
-        >
-          <h2 class="text-white text-xl font-semibold text-center">
-            {{ service.title }}
-          </h2>
-        </div>
-
-        <!-- Overlay Detail & Button (Hidden Until Hover) -->
-        <div
-          class="absolute inset-0 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/60 p-4"
-        >
-          <h2 class="text-white text-xl font-semibold">{{ service.title }}</h2>
-          <p class="text-white mt-2 max-w-xs">{{ service.detail }}</p>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center bg-black/60 p-6 z-20">
+          <h2 class="text-white text-2xl font-semibold">{{ service.title }}</h2>
+          <p class="text-white mt-3 max-w-sm">{{ service.detail }}</p>
           <NuxtLink
             :to="`/solution/${service.slug}`"
-            class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            class="mt-5 bg-white/20 text-white px-5 py-2.5 rounded-lg transition hover:bg-white/40 0"
           >
             Read More
           </NuxtLink>
@@ -60,21 +40,19 @@
       </div>
     </div>
 
-
+    <div class="mt-16">
+      <Consulting />
+    </div>
   </div>
-  <Consulting />    
-</div>
-
-  
 </template>
 
-<script>
-import Consulting from "~/components/layout/consulting.vue"
 
+<script>
+import Consulting from "~/components/layout/consulting.vue";
 
 export default {
-    components: {
-    Consulting, // อย่าลืมลงทะเบียนที่นี่
+  components: {
+    Consulting,
   },
   data() {
     return {
