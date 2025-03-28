@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="xl:bg-white md:bg-white bg-[#576fb7] fixed w-full z-20 top-0 start-0 border-b border-gray-200 shadow-2xl"
+    class="xl:bg-white md:bg-white bg-[#576fb7] fixed w-full z-30 top-0 start-0 border-b border-gray-200 shadow-2xl"
   >
     <div
       class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-6 md:px-10 py-4"
@@ -57,7 +57,7 @@
         class="w-full md:flex md:w-auto md:order-1 "
       >
         <ul
-          class="flex bg-white flex-col p-4 md:p-0 mt-4 text-xl font-medium md:space-x-2 md:flex-row md:mt-0 md:border-0 rounded-lg  "
+          class="flex bg-white flex-col p-4 md:p-0 mt-4 text-lg font-semibold  md:space-x-2 md:flex-row md:mt-0 md:border-0 rounded-lg  "
         >
           <li>
             <NuxtLink

@@ -3,9 +3,9 @@
 
   
     <div class="flex flex-col items-start justify-center md:pl-[100px] lg:pl-[150px] xl:pl-[300px]">
-        <h1  class="text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[#245184] font-bold semibold  "><span class="text-[#245184]  "> ― </span> Multinational Experience</h1>
-        <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-bold semibold  ">Defending cyber-threats</h2>
-        <h2 class="text-2xl md:text-3xl lg:text-4xl xl:text-5xl  font-bold semibold  ">with <span class="text-[#245184]">borderless technology</span></h2>
+        <h1  class="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-[#245184] font-bold semibold  pb-5"><span class="text-[#245184]  "> ― </span> Multinational Experience</h1>
+        <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl  font-bold semibold  ">Defending cyber-threats</h2>
+        <h2 class="text-xl md:text-2xl lg:text-3xl xl:text-4xl  font-bold semibold  ">with <span class="text-[#245184]">borderless technology</span></h2>
     </div>
 
     <div class="flex  items-center justify-center py-10">
