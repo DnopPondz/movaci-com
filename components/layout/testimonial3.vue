@@ -1,7 +1,7 @@
-import Testimonial3 from '~/components/layout/testimonial3.vue';
+
 <template>
   <div
-    class="relative min-h-screen flex flex-col items-center justify-center bg-[#9bbbe1] bg-opacity-90 rounded-t-xl "
+    class="relative min-h-screen flex flex-col items-center justify-center bg-[#9bbbe1] bg-opacity-90 rounded-t-xl  "
     style="background-image: url('/vector.png'); background-size: cover; background-position: center;"
   >
     <div class="flex flex-col  justify-between items-center bg-[#ffffff] bg-opacity-90 shadow-lg rounded-lg p-6 max-w-lg w-[220px] h-[300px] text-center">
