@@ -4,7 +4,7 @@
       <!-- Left Side - Image Section -->
       <div class="w-1/2 py-[2px] flex justify-center items-center">
         <div class="relative xl:left-[200px] w-full max-w-[500px]">
-          <img src="/img/home/capture.png" alt="Security Illustration" class="w-full h-auto object-cover">
+          <img src="/img/home/capture.PNG" alt="Security Illustration" class="w-full h-auto object-cover">
         </div>
       </div>
 
