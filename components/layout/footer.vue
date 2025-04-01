@@ -4,7 +4,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <!-- Column 1: Logo & Company Info -->
         <div class="border-r border-gray-300 pr-6">
-          <img src="/images/footer/logo.png" class="h-12 mb-4 mx-auto md:mx-0" alt="Movaci Logo">
+          <img src="/images/footer/logo.png" class="h-20 mb-4 max-sm:mx-auto md:mx-0" alt="Movaci Logo">
           <h3 class="text-4xl text-[#576fb7] font-semibold">Movaci Co., Ltd.</h3>
           
           <div v-if="!loadLocation" class="mt-4 text-lg">
@@ -85,7 +85,7 @@
       </div>
 
       <!-- Copyright -->
-      <div class="mt-8 text-center text-gray-400 text-sm border-t border-gray-400 pt-4">
+      <div class="mt-8 text-center text-black text-sm border-t border-gray-400 pt-4">
         Copyright © {{ currentYear }} Movaci. All rights reserved.
       </div>
     </div>
@@ -121,19 +121,20 @@ const footerList = ref([
   {
     title: "Solutions",
     details : [
-      { link: "/", content: "Secure Web Hosting" },
-      { link: "/", content: "Cloud Server" },
-      { link: "/", content: "Microsoft 365" },
-      { link: "/", content: "Managed Online Backup" },
-      { link: "/", content: "MailGuard" },
-      { link: "/", content: "Managed Services" },
-      { link: "/", content: "Security Auditing and Testing" },
-      { link: "/", content: "IT Consulting" },
-      { link: "/", content: "Training Services" },
-      { link: "/", content: "Hardware & Software Procurement Services" },
-      { link: "/", content: "Secure Email Services" },
-      { link: "/", content: "Movaci Next Cloud" },
-      { link: "/", content: "Authorized Pearson VUE Testing Center" },
+      { link: "/solution/secure-web-hosting", content: "Secure Web Hosting" },
+      { link: "/solution/cloud-servers", content: "Cloud Server" },
+      { link: "/solution/microsoft-365", content: "Microsoft 365" },
+      { link: "/solution/managed-online-backup", content: "Managed Online Backup" },
+      { link: "/solution/mail-guard", content: "MailGuard" },
+      { link: "/solution/managed-services", content: "Managed Services" },
+      { link: "/solution/security-auditing-and-testing", content: "Security Auditing and Testing" },
+      { link: "/solution/it-consulting", content: "IT Consulting" },
+      { link: "/solution/training-services", content: "Training Services" },
+      { link: "/solution/internet-services", content: "Internet Services" },
+      { link: "/solution/hardware-software-procurement-services", content: "Hardware & Software Procurement Services" },
+      { link: "/solution/secure-email-services", content: "Secure Email Services" },
+      { link: "/solution/next-cloud", content: "Movaci Next Cloud" },
+      { link: "/solution/authorized-pearson-vue-testing-center", content: "Authorized Pearson VUE Testing Center" },
     ]
   },
   {

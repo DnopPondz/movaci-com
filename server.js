@@ -2,7 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = express();
 const port = 5000; // ใช้พอร์ต 3000 ตามเดิม
 
@@ -22,14 +24,14 @@ app.post('/send-email', async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'dodolo.lovely@gmail.com',
-      pass: 'ggjp scqc fiva jjyy', // 🔴 อันตราย ห้ามใช้ใน Production
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_USER, 
     },
   });
 
   const mailOptions = {
-    from: 'dodolo.lovely@gmail.com',
-    to: 'pondwachi.th@gmail.com',
+    from: process.env.SENDING_EMAIL,
+    to: process.env.RECIVE_EMAIL,
     subject: `Contact Form: ${subject}`,
     text: `
       First Name: ${firstName}

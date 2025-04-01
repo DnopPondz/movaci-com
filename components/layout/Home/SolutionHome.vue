@@ -36,7 +36,7 @@
     </div>
 
     <!-- Swiper Carousel (Right) -->
-    <div class="relative mt-12 xl:mr-[100px] max-w-full mx-auto flex justify-center xl:w-1/2">
+    <div class="relative  xl:mr-[100px] max-w-full mx-auto flex justify-center xl:w-1/2">
       <swiper
         :modules="modules"
         :slides-per-view="'auto'"
@@ -57,7 +57,8 @@
           class="h-full flex max-w-xs sm:max-w-sm"
         >
           <div
-            class="bg-white/30 backdrop-blur-md rounded-lg shadow-lg p-6 w-80 text-center mx-auto border border-white/40 h-full flex flex-col justify-between"
+            class="bg-white/30 backdrop-blur-md rounded-lg shadow-lg p-6 
+            w-[250px] text-center mx-auto border border-white/40 h-[400px] flex flex-col justify-between"
           >
             <img
               :src="service.image"
@@ -71,9 +72,10 @@
                 {{ service.description }}
               </p>
             </div>
-            <a href="#" class="mt-4 inline-block text-blue-600 font-semibold">
+            
+            <NuxtLink :to="`/solution/${service.slug}`" class="mt-4 inline-block text-blue-600 font-semibold">
               → READ MORE
-            </a>
+            </NuxtLink>
           </div>
         </swiper-slide>
       </swiper>
@@ -88,6 +90,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+
 export default {
   components: { Swiper, SwiperSlide },
   setup() {
@@ -99,83 +102,97 @@ export default {
           title: "Secure Web Hosting",
           description:
             "Secure your web hosting with our reliable data centers.",
+            slug: "secure-web-hosting",
         },
         {
           image: "/img/products_services/product&services/cloud-servers/thumbnail.webp",
           title: "Cloud Servers",
           description:
             "Secure virtual servers that are private and that have flexible OS options.",
+            slug: "cloud-servers",
         },
         {
           image: "/img/products_services/product&services/microsoft365/thumbnail.webp",
           title: "Microsoft 365",
           description:
             "Movaci provides custom Microsoft solutions in the following areas.",
+            slug: "microsoft-365",
         },
         {
           image: "/img/products_services/product&services/managed-online-backup/thumbnail.webp",
           title: "Managed Online Backup",
           description:
             "Guarantee your last line of defense against a data breach with Movaci’s help.",
+            slug: "managed-online-backup",
         },
         {
           image: "/img/products_services/product&services/mail-guard/thumbnail.webp",
           title: "MailGuard",
           description:
             "Avoid any email threats with our powerful security solution.",
+            slug: "mail-guard",
         },
         {
           image: "/img/products_services/product&services/managed-services/thumbnail.webp",
           title: "Managed Services",
           description:
             "Let Movaci help your business grow through our industry-leading managed IT support services.",
+            slug: "managed-services",
         },
         {
           image: "/img/products_services/product&services/security-auditing-and-testing/thumbnail.webp",
           title: "Security Auditing and Testing",
           description:
             "Our security services are designed to meet the needs of small to mid-sized businesses and organizations.",
+            slug: "security-auditing-and-testing",
         },
         {
           image: "/img/products_services/product&services/it-consulting/thumbnail.webp",
           title: "IT Consulting",
           description:
             "Professional and custom-tailored IT consultation services.",
+            slug: "it-consulting",
         },
         {
           image: "/img/products_services/product&services/training-services/thumbnail.webp",
           title: "Training Services",
           description:
             "Push your business to the next level with skills and certifications Movaci provided.",
+            slug: "training-services",
         },
         {
           image: "/img/products_services/product&services/internet-services-summary/thumbnail.webp",
           title: "Internet Services",
           description:
             "Business internet designed for reliability and tailored for your connectivity needs.",
+            slug: "internet-services",
         },
         {
           image: "/img/products_services/product&services/hardware&software-procurement-services/thumbnail.webp",
           title: "Hardware & Software Procurement Services",
           description: "Top-tier products from industry leading brands.",
+          slug: "hardware-software-procurement-services",
         },
         {
           image: "/img/products_services/product&services/secure-email-services/thumbnail.webp",
           title: "Secure Email Services",
           description:
             "Ensure the confidentiality, integrity, and availability of your email communications.",
+            slug: "secure-email-services",
         },
         {
           image: "/img/products_services/product&services/next-cloud/thumbnail.webp",
           title: "Movaci Next Cloud",
           description:
             "Robust, secure, and scalable private cloud solution to manage and share data seamlessly.",
+            slug: "next-cloud",
         },
         {
           image: "/img/products_services/product&services/authorized-pearson-vue-testing-center/thumbnail.webp",
           title: "Authorized Pearson VUE Testing Center",
           description:
             "State-of-the-art, air-conditioned testing center in Chiang Mai.",
+            slug: "authorized-pearson-vue-testing-center",
         },
       ],
     };

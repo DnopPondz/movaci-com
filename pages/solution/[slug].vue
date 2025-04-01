@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 min-h-screen p-6">
+  <div class="bg-gray-100  min-h-screen p-6">
     <div v-if="service" class="max-w-7xl mx-auto bg-white p-8 rounded-t-lg shadow-lg">
       <!-- Hero Image -->
       <img
