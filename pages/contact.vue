@@ -145,7 +145,7 @@ const formData = reactive({
 
 const sendEmail = async () => {
   try {
-    await axios.post("http://localhost:5000/send-email", formData);
+    await axios.post("/api/send-email", formData);
     alert("Email sent successfully!");
     // รีเซ็ตฟอร์ม
     Object.keys(formData).forEach((key) => (formData[key] = ""));
